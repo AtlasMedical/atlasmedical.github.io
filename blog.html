@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Atlas Medical</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- <script> 
+    $(function(){
+      $("#footer").load("footer.html"); 
+    });
+    </script>  -->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Atlas Medical</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">News</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+
+        <section id='blog_1-content' class="overlay" aria-hidden="true">
+            <div>
+                <p>Throughout this Winter Atlas Medical will be highlighting development milestones.</p>
+                <button type="button" id="blog_1-close" class="close-overlay">Close</button>
+            </div>
+        </section>
+
+        <section id='blog_2-content' class="overlay" aria-hidden="true">
+                <div>
+                    <p>We're live!</p>
+                    <button type="button"  id="blog_2-close" class="close-overlay">Close</button>
+                </div>
+        </section>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+
+            <article class="post featured">
+                <header class="major">
+                    <span class="date">January 15, 2019</span>
+                    <h2>First Post<br />
+                            First blog post of the season</h2>
+                </header>
+                <!-- <a href="#" class="image fit"><img src="images/baylis.png" alt="" /></a> -->
+                <p>Throughout this Winter Atlas Medical will be highlighting development milestones.</p>
+                <ul class="actions special">
+                    <li><button type="button" class="open-overlay" id='blog_1-open'>Full Story</button></li>
+                </ul>
+            </article>
+   
+
+            <!-- Posts -->
+            <section class="posts">
+                <article>
+                        <header>
+                            <span class="date">January 15, 2019</span>
+                            <h2>First Post<br />
+                                    First blog post of the season</h2>
+                        </header>
+                        <p>Throughout this Winter Atlas Medical will be highlighting development milestones.</p>
+                        <ul class="actions special">
+                            <li><button type="button" class="open-overlay" id='blog_1-open'>Full Story</button></li>
+                        </ul>
+                    </article>
+                <article>
+                    <header>
+                        <span class="date">January 16, 2019</span>
+                        <h2>Website Launch!<br />
+                                The website is now live</h2>
+                    </header>
+                    <ul class="actions special">
+                        <li><button type="button" class="open-overlay" id='blog_2-open'>Full Story</button></li>
+                    </ul>
+                </article>
+           
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <div class="pagination">
+                    <!--<a href="#" class="previous">Prev</a>-->
+                    <a href="#" class="page active">1</a>
+                    <!-- <a href="#" class="page">2</a>
+									<a href="#" class="page">3</a>
+									<span class="extra">&hellip;</span>
+									<a href="#" class="page">8</a>
+									<a href="#" class="page">9</a>
+									<a href="#" class="page">10</a> -->
+                    <!-- <a href="#" class="next">Next</a> -->
+                </div>
+            </footer>
+
+        </div>
+
+        <footer id="footer">
+            <div id="footer"></div>
+        </footer>
+
+        
+        <div id="copyright">
+            <ul>
+                <li>&copy; Atlas Medical</li>
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        var body = document.body;
+        var overlays = document.querySelectorAll('.overlay');
+        var overlayButtons = document.querySelectorAll('button[class$="overlay"]');
+        
+        [].forEach.call(overlayButtons, function(btt){
+            var bid = btt.id;
+            btt.addEventListener('click', function(){
+                var overlay_id = bid.slice(0, 6) + '-content';
+                console.log(overlay_id);
+                overlay = document.querySelector("#" + overlay_id)
+                var overlayOpen = this.className === 'open-overlay';
+                overlay.setAttribute('aria-hidden', !overlayOpen);
+                body.classList.toggle('noscroll', overlayOpen);
+                
+
+                overlay.scrollTop = 0;
+            }, false)
+        });
+    </script>
+
+</body>
+
+</html>
