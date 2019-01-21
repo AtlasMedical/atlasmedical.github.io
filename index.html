@@ -56,39 +56,74 @@
         <div id="main">
 
             <section class="post">
-                <h2>Problem</h2>
+                <h2>The Atlas P1</h2>
+                <span class="image main"><img src="images/3d_cad.jpg" alt=""></span>
+                <h4>Intelligent pressure redistribution through variable stiffness technology</h4>
+                <br/>
+                <h2>Presure Injuries - Medical Background</h2>
                 <p>
-                    A pressure injury is an illness of the skin and underlying tissue due to restricted blood flow as a
-                    result of immobility. Every year in the United States, pressure injuries kill 60,000 people and
-                    cost the healthcare system over 11 billion dollars. Atlas Medical aims to postpone the onset and
-                    mitigate the existence of pressure injuries in hospitalized, bedridden patients by automating
-                    patient adjustment.
+                    Pressure injuries develop due to consistent pressure on a region of tissue and range from a minor irritation to a deep wound.
                 </p>
-                <h2>Technology Overview</h2>
+                <span class="image fit"><img src="images/pressure_stages.png" alt=""></span>
+                <p>Specific areas of the body are at higher risk</p>
+                <span class="image fit"><img src="images/pressure_bod.jpg" alt=""></span>
+                <h2>Problem Background</h2>
+                <h3> $11+ billion annually</h3>
                 <p>
-                    Our technology consists of a full-scale pressure sensing array, an intelligent pneumatics system,
-                    and novel data processing algorithms.
+                    Pressure injuries increase the cost of treatment due to the need for more intensive monitoring and increased nurse workload.    
                 </p>
+                <h3>60,000 Deaths</h3>
+                <p>
+                    Patients who have a pressure injury have a 10% increase in mortality rate.
+                </p>
+                <h3>6 Days Longer Hospital Stay</h3>
+                <p>
+                    Recovery times increase, leading to patients staying longer and using more hospital resources.
+                </p>
+
+                <h2>Current Solutions</h2>
+                <div class="flex-container" style="display: flex; align-items: center;">
+                    <div style="flex-basis: 200px">
+                    <span class="image fit"><img src="images/risk_assesment.jpg"></span></div>
+                    <div style="flex-basis: 800px"><p>A subjective risk assesment is done using a manual rating, known as the <i>Braden Scale</i>
+                    </p></div>
+               </div>
+               <div class="flex-container" style="display: flex; align-items: center;">
+                    <div style="flex-basis: 200px">
+                            <span class="image fit"><img src="images/visual_inspection.jpg"></span></div>
+                    <div style="flex-basis: 800px"><p>Nurses and caregivers visually inspect the skin to look for signs of pressure injuries, often needing to turn patients to do so.
+                    </p></div>
+                    
+                </div>
+                <div class="flex-container" style="display: flex; align-items: center;">
+                        <div style="flex-basis: 200px">
+                        <span class="image fit"><img src="images/manual_repositioning.jpg"></span></div>
+                        <div style="flex-basis: 800px"><p>If a patient develops a pressure injury, or is at particularly high risk of doing so they are manually repositioned by hand to change pressure distribution. This repositioning can take up to 30 minutes and four nurses to do and it sometimes still isn't enough.
+                        </p></div>
+                    </div>
+    
+                <h2>Solution Overview</h2>
+                <p>Atlas Medical is developing a variable stiffness mattress to prevent pressure injuries. The stiffness of individual air cells within the mattress are modified using a custom control system.</p>
+
                 <span class="image fit"><img src="images/sytem_overview.png" alt="" /></span>
 
                 <h2>Data flow</h2>
                 <p>
                     The pressure measurement system and pneumatics control system combine to form a true Mechatronics
-                    system:
+                    system, combining software, electrical and mechanical aspects of design. The Atlas P1 can be broken into three distinct layers:
                 </p>
                 <span class="image fit"><img src="images/system_control_flow.png" alt="" /></span>
 
-                <h2>Electronics</h2>
-                <p>
-                    To facilitate the design of a sensor which contains over 5000 sense elements two custom PCBs were designed and fabricated:
-                </p>
-                <div class="box alt">
-                        <div class="row gtr-50 gtr-uniform">
-                            <div class="col-4"><span class="image fit"><img src="images/column_board.png" alt="" /></span></div>
-                            <div class="col-4"><span class="image fit"><img src="images/row_board.png" alt="" /></span></div>
-                            <div class="col-4"><span class="image fit"><img src="images/sensor.PNG" alt="" /></span></div>
-                        </div>
-                    </div>
+                <h2>Key Innovations</h2>
+                <h3>Column Control</h3>
+                <p>To control the reading of voltages from individual columns a custom PCB was designed and manufactured. The PCB features three ADCs and signal conditioning circuitry.</p> 
+                <span class="image fit"><img src="images/column_board.png" alt="" /></span>
+                <h3>Row Control</h3>
+                <p>A modular PCB was developed and manufactured to control which rows in the sensor matrix are enabled at any given time. The board features a swappable design and a 16 channel demultiplexer</p> 
+                <span class="image fit"><img src="images/row_board.png" alt="" /></span>
+                <h3>Statisitical Analysis</h3>
+                <p>By treating the sensor information as an image computer vision techiniques are applied to enhance and analyze the signal. The sensor data is upsampled using bicubic interpolation and a characterization process is used to develop a <i>deblurring method</i> which works to partially reverse the air diffusion properties of the air cells.</p> 
+                <span class="image fit"><img src="images/stats_analysis.png" alt="" /></span>
     
                 
             </section>

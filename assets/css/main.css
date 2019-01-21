@@ -2621,7 +2621,7 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 4rem 0;
+			margin: 2rem 0;
 			width: 100%;
 		}
 
@@ -3760,7 +3760,7 @@ input, select, textarea {
 		}
 
 		#main > .post {
-			padding: 8rem 8rem 6rem 8rem ;
+			padding: 4rem 4rem 3rem 4rem ;
 		}
 
 			#main > .post header.major > .date {
