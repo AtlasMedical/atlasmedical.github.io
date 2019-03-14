@@ -91,6 +91,92 @@
             </div>
     </section>
 
+    <section id='blog_4-content' class='overlay posts' aria-hidden="true">
+        <div style="height: 80%; width: 50%;  margin-block-start: 5%; margin-block-end: 5%;">
+            <h3>Canadian Engineering Competition</h2>
+            <p> Atlas Medical took home third place at the Canadian Engineering Competition in the Innovative Design category. We are incredibly proud of this achievement given the timeframe we had to improve our prototype between OEC and CEC. At CEC, we were able to demonstrate the functional sensing matrix to a panel of judges, who were impressed with the results of the sensor and the progress on the system so far.
+                    <br/>
+                    <br/>
+    
+                
+
+                Our next step; build all the pneumatics!                
+                <br/>
+                <br/>
+
+            
+            <button type="button"  id="blog_4-close" class="close-overlay">Close</button>
+        </div>
+    </section>
+
+    <section id='blog_5-content' class='overlay posts' aria-hidden="true">
+        <div style="height: 80%; width: 50%;  margin-block-start: 5%; margin-block-end: 5%;">
+            <h3>Pneumatics PCB</h2>
+            <p> Our Pneumatics Control Board arrived today!
+                <br/>
+                <br/>
+                The solenoid valves that we are using have the easiest control and mechanical interface of any industrial or hobby valves that we could source in a reasonable amount of time. Unfortunately, they draw a large amount of power; 6 watts at 12 VDC. That is over <b>500 mA of current</b>! Originally, we were going to place all of our pneumatics electronics on a protoboard, however, this posed some safety concerns. We needed a way to safely route and control this amount of current and we decided that a protoboard is not the best solution due to messy wiring and lots of exposed connections.
+                <br/>
+                <br/>
+                For this reason, we opted to design another PCB (on top of the other two custom boards we already have) to safely control the valves. We call this one the PCB PCB (pneumatics control board printed circuit board).
+                <br/>
+                <br/>
+                The results are awesome! The board looks super cool and after a first bring-up, works as intended! 
+                <br/>
+                <br/>
+
+                <span class="image fit"><img src="images/pcb_bare.jpg" alt=""></span>
+                <span class="image fit"><img src="images/pcb_pcb_test.jpg" alt=""></span>          
+
+            
+            <button type="button"  id="blog_5-close" class="close-overlay">Close</button>
+        </div>
+    </section>
+
+    <section id='blog_6-content' class='overlay posts' aria-hidden="true">
+        <div style="height: 80%; width: 50%;  margin-block-start: 5%; margin-block-end: 5%;">
+            <h3>Pneumatics Build</h2>
+            <p> We have everything we need to finish the build of the pneumatic system, which is a huge step forward and one step closer to being hardware complete! 
+                <br/>
+                <br/>
+
+                At the outset of this project, we recognized that we needed the ability to have fine control over different regions of the air mattress that we purchased.   
+                <br/>
+                <br/>
+
+                The mattress we purchased has 17 individual air cells, with the three air cells located at the head of the bed “shorted” together. So, how does one obtain fine control? We decided early on that we would need to have control over each of the individual pouches. This is the maximum amount of resolution available with the mattress that we purchased. To control each individual pouch, we purchased tubing and connected each pouch to its own solenoid valve.
+                <br/>
+                <br/>
+
+                We are able to electronically control the solenoid valves with our Pneumatics Control Board and an Arduino Mega. The Arduino outputs a high or low voltage to the gate of a power MOSFET to either close or open the MOSFET, acting as a switch. The MOSFET is mounted on the Pneumatics Control Board and when it closes it completes a single solenoid valve circuit, allowing current to flow through the valve and thereby actuating it. 
+                <span class="image fit"><img src="images/pneumatics_wiring.jpg" alt=""></span>
+
+                <br/>
+                The Arduino also has electronic control over the air pump that is used to actually fill the pouches. With control over each individual piece of the system, we are able to set the air pressures in the cells precisely and integrate it elegantly into a feedback loop to continuously regulate pressure across a patient’s body. 
+                <span class="image fit"><img src="images/pump.jpg" alt=""></span>    
+
+                <br/>
+                <br/>
+
+                To bring everything together we built a wooden "pneumatics arena" where we can mount our hardware. To route tubing from the pneumatics arena to the bed we drilled slots in our 2x4 pieces of wood. 
+                <span class="image fit"><img src="images/pneumatics_slot.jpg" alt=""></span>    
+                With this we are <b>Hardware Complete!</b>
+                <span class="image fit"><img src="images/full_system.jpg" alt=""></span>    
+
+            <button type="button"  id="blog_6-close" class="close-overlay">Close</button>
+        </div>
+    </section>
+
+    <section id='blog_7-content' class='overlay posts' aria-hidden="true">
+            <div style="height: 80%; width: 50%;  margin-block-start: 5%; margin-block-end: 5%;">
+                <h3>Controlling Pressure</h2>
+                <p> Today marked a major milestone in our development, our system can now control pressure! We developed a simple controller that iteravily relieves pressure on a patients body. Combined with our new software tooling we can see these results in real time. With this our system has fully come together! Better to show then tell:
+                <span class="image fit"><img src="images/pressure_relieve.jpg" alt=""></span>    
+             
+                
+                <button type="button"  id="blog_7-close" class="close-overlay">Close</button>
+            </div>
+        </section>
     
 
         <!-- Main -->
@@ -135,6 +221,50 @@
                             <li><button type="button" class="open-overlay" id='blog_3-open'>Full Story</button></li>
                         </ul>
                     </article>
+                    <article>
+                        <header>
+                            <span class="date">February 22nd, 2019</span>
+                            <h2>Pneumatics PCB</h2>
+                        </header>
+                        <p>Our Pneumatics PCB arrived and its fully tested!</p>
+                        <ul class="actions special">
+                            <li><button type="button" class="open-overlay" id='blog_5-open'>Full Story</button></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <span class="date">March 1st, 2019</span>
+                            <h2>Canadian Engineering Competiton</h2>
+                        </header>
+                        <p>We came third in the Canadian Engineering Competition!</p>
+                        <ul class="actions special">
+                            <li><button type="button" class="open-overlay" id='blog_4-open'>Full Story</button></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <span class="date">March 8th, 2019</span>
+                            <h2>Hardware Complete!</h2>
+                        </header>
+                        <p>We built the final component of our system and are now hardware compelte!</p>
+                        <ul class="actions special">
+                            <li><button type="button" class="open-overlay" id='blog_6-open'>Full Story</button></li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <header>
+                            <span class="date">March 12th, 2019</span>
+                            <h2>Closed Loop Control</h2>
+                        </header>
+                        <p>We combined our software and hardware to develop a closed loop control system for relieving pressure</p>
+                        <ul class="actions special">
+                            <li><button type="button" class="open-overlay" id='blog_7-open'>Full Story</button></li>
+                        </ul>
+                    </article>
+                    
+                    
+                    
 
             </section>
 
